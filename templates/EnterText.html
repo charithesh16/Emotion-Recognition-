@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet">
+</head>
+<body>
+<div>
+    <style>
+        .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color:#0A043C;
+        }
+
+        h2 {
+            text-align: center;
+            color: yellow
+        }
+
+
+        h3 {
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+
+        }
+
+        .button {
+            background-color: #03506F;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin-left:-400px;
+            
+
+        }
+
+        .text{
+            margin-top: 50px;
+            padding-bottom: 5px;
+            margin-bottom: 50px;
+            padding-left: 100px;         
+            position: relative;
+            justify-self: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .centered {
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    </style>
+        
+    <div class="container">
+        
+        <div class="animation-area" >
+            <img src="/static/emo3.jpg" style="height: 100vh; width: 100%;">
+            <title>enter text</title>
+
+            <!-- <div style="display:flex;flex-direction:column; align-items:center;
+            justify-content:center;
+            text-align:center;">
+              <div class="animation-area" style="height: 100vh;display:flex;flex-direction:column; align-items:center;
+              justify-content:center;text-align:center;"> -->
+            <h3 style="color:#0A043C; justify-content: center;" class="centered">Enter how was your day!!</h3>
+          
+             <!-- <div class="center">
+                <form action=/imageurl method=post >
+                    <textarea class="form-control" rows="5" cols="60"></textarea>
+                    <button type="button" class="button" >Analyze Emotion</button>
+                </form>
+            </div> -->
+            
+            <!-- <div class="form-group">                 
+                <textarea name="name" class="form-control" rows="5" cols="60"></textarea>
+            </div>
+            <a class="button" href='textanalysis'>Analyse Emotion</a> -->
+            <form action="{{ url_for('textanalysis') }}" method="post">
+                <textarea name="text" class="text" rows="6" cols="60"></textarea>
+                <input type="submit" class="button" value="Analyse Emotion">
+            </form>
+           
+            </div>
+            </div></div>
+
+
+        </div>
+            
+
+</div>
+</body>
+
+</html>
