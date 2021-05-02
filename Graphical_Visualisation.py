@@ -127,7 +127,7 @@ def Text_Analysis(text):
     # Labelling the axes and title
     plt.xlabel("Types of Emotions")
     plt.ylabel("Probability")
-    plt.title("Facial Emotion Recognition")
+    plt.title("Emotion Recognition")
     path = "static/" + "bar_plot" + str(emo)
     plt.savefig(path)
     return (["bar_plot" + emo, emo])
